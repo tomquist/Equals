@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Equals"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "Swift utility to help implementing Equatable and Hashable protocols"
 
   s.description  = <<-DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/tomquist/Equals.git", , :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/tomquist/Equals.git", :tag => "v#{s.version}" }
   s.source_files  = "Sources/Equals/*.{h,m,swift}"
   s.public_header_files = "Sources/Equals/*.h"
 
