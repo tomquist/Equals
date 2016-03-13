@@ -1,11 +1,48 @@
 [![Build Status](https://travis-ci.org/tomquist/Equals.svg)](https://travis-ci.org/tomquist/Equals)
 [![codecov.io](https://codecov.io/github/tomquist/Equals/coverage.svg)](https://codecov.io/github/tomquist/Equals)
-[![Platform support](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchos-lightgrey.svg?style=flat-square)](https://github.com/tomquist/Equals)
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tomquist/Equals/blob/master/LICENSE.md)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Equals.svg?style=flat)](https://cocoapods.org/pods/Equals)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/tomquist/Equals)
+[![Platform support](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchos-brightgreen.svg?style=flat)](https://github.com/tomquist/Equals)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/tomquist/Equals/blob/master/LICENSE.md)
 
 # Equals
 Equals is a Swift µframework to reduce boilerplate code when conforming to Equatable and Hashable protocols.
 
+
+## Installation
+
+### CocoaPods
+
+Add Equals to your pod file and run ``pod install``:
+```ruby
+pod 'Equals', '~> 1.0.0'
+```
+
+### Carthage
+
+Add Equals to your Cartfile (package dependency) or Cartfile.private (development dependency):
+```
+github "tomquist/Equals" ~> 1.0.0
+```
+
+### Swift Package Manager
+Add to your Package.swift dependencies:
+```swift
+import PackageDescription
+
+let package = Package(
+    // ... your project details
+    dependencies: [
+        // As a required dependency
+        .Package(url: "ssh://git@github.com/tomquist/Equals.git", majorVersion: 1)
+    ],
+    testDependencies: [
+        // As a test dependency
+        .Package(url: "ssh://git@github.com/tomquist/Equals.git", majorVersion: 1)
+    ]
+)
+```
 
 ## Motivation
 
