@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "Equals"
-  s.version      = "1.0.0"
-  s.summary      = "Swift utility to help implementing Equatable and Hashable protocols"
+  s.version      = "1.0.1"
+  s.summary      = "Swift µframework to reduce boilerplate code when conforming to Equatable and Hashable"
 
   s.description  = <<-DESC
                    Equals is a µframework that makes implementing Equatable and Hashable protocol very easy
