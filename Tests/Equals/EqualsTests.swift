@@ -12,7 +12,7 @@ extension Person: EqualsEquatable {
     static let equals: Equals<Person> = Equals()
         .append {$0.firstName}
         .append {$0.lastName}
-        .append {$0.children}
+        .append(collection: {$0.children})
         .append {$0.sequence}
 }
 
