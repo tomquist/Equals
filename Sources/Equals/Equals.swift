@@ -65,18 +65,19 @@ public struct Equals<T> {
     }
 
     /// Returns a new equatability-helper containing the given sequence of equatable property.
-    public func append<E: Equatable, S: SequenceType where S.Generator.Element == E>(sequence: T -> S) -> Equals<T> {
+    public func append<E: Equatable, S: SequenceType where S.Generator.Element == E>(sequence sequence: T -> S) -> Equals<T> {
         var ret = self; ret.helper.append(sequence); return ret
     }
 
     /// Returns a new equatability-helper containing the given collection of equatable property.
-    public func append<E: Equatable, S: CollectionType where S.Generator.Element == E>(collection: T -> S) -> Equals<T> {
+    public func append<E: Equatable, S: CollectionType where S.Generator.Element == E>(collection collection: T -> S) -> Equals<T> {
         var ret = self; ret.helper.append(collection); return ret
     }
 
 }
 
 extension Equals: EqualsType {
+    /// Returns true, if lhs is equal to rhs
     public func equals(lhs: Value, _ rhs: Value) -> Bool {
         return helper.equals(lhs, rhs)
     }
