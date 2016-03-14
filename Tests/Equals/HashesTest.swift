@@ -31,8 +31,11 @@ class HashesTests: XCTestCase, XCTestCaseProvider {
     }
     
     func testEqualPersons() {
-        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], sequence: [])
-        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], sequence: [])
+        let personX = Person(firstName: "John", lastName: "Doe", middleNames: [], children: [], sequence: [1])
+        let personY = Person(firstName: "John", lastName: "Smith", middleNames: [], children: [], sequence: [])
+        
+        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["André"], children: [personX, personY], sequence: [1, 2])
+        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["André"], children: [personY, personX], sequence: [1, 2])
         XCTAssertEqual(person1, person2)
         XCTAssertEqual(person1.hashValue, person2.hashValue)
     }

@@ -4,8 +4,8 @@ struct HashableHelper<T>: HashesType {
     typealias Hasher = T -> Int
     private var hashers = [Hasher]()
     
-    private let constant: Int
-    private let initial: Int
+    let constant: Int
+    let initial: Int
     init(constant: Int, initial: Int) {
         self.constant = constant
         self.initial = initial
