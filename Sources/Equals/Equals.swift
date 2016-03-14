@@ -107,7 +107,7 @@ public struct Hashes<T> {
     ///     - constant: Should be a non-zero, odd number used as the multiplier (e.g. 37)
     ///     - initial: Should be a non-zero, odd number used as the initial value (e.g. 17)
     public init(constant: Int = 37, initial: Int = 17) {
-        hashableHelper = HashableHelper(constant: 37, initial: 17)
+        hashableHelper = HashableHelper(constant: constant, initial: initial)
     }
 
     /// Returns a new hashing-helper containing the given `Hashable` property.

@@ -21,6 +21,7 @@ class HashesTests: XCTestCase, XCTestCaseProvider {
     
     var allTests: [(String, () throws -> Void)] {
         return [
+            ("testInitialAndConstantValue", testInitialAndConstantValue),
             ("testEqualPersons", testEqualPersons),
             ("testEqualPersonsWithDifferentFirstName", testEqualPersonsWithDifferentFirstName),
             ("testEqualPersonsWithDifferentLastName", testEqualPersonsWithDifferentLastName),
@@ -28,6 +29,12 @@ class HashesTests: XCTestCase, XCTestCaseProvider {
             ("testEqualPersonsWithDifferentChildren", testEqualPersonsWithDifferentChildren),
             ("testEqualPersonsWithDifferentSequences", testEqualPersonsWithDifferentSequences),
         ]
+    }
+    
+    func testInitialAndConstantValue() {
+        let hashes = Hashes<Int>(constant: 31, initial: 7)
+        XCTAssertEqual(31, hashes.constant)
+        XCTAssertEqual(7, hashes.initial)
     }
     
     func testEqualPersons() {
