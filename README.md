@@ -16,14 +16,14 @@ Equals is a Swift µframework to reduce boilerplate code when conforming to Equa
 
 Add Equals to your pod file and run ``pod install``:
 ```ruby
-pod 'Equals', '~> 1.0.0'
+pod 'Equals', '~> 1.0.1'
 ```
 
 ### Carthage
 
 Add Equals to your Cartfile (package dependency) or Cartfile.private (development dependency):
 ```
-github "tomquist/Equals" ~> 1.0.0
+github "tomquist/Equals" ~> 1.0.1
 ```
 
 ### Swift Package Manager

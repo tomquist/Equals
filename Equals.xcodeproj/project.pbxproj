@@ -73,6 +73,8 @@
 		A749F07E1C95C61E00536DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A749F0941C95C6BD00536DED /* Equals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Equals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A749F0981C95C6BD00536DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A749F0A01C9ED6A600536DED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A749F0A11C9ED6EA00536DED /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A77238B71C95AE70006E9657 /* Equals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Equals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77238BA1C95AE70006E9657 /* Equals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Equals.h; sourceTree = "<group>"; };
 		A77238BC1C95AE70006E9657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,6 +186,8 @@
 		A77238AD1C95AE70006E9657 = {
 			isa = PBXGroup;
 			children = (
+				A749F0A01C9ED6A600536DED /* README.md */,
+				A749F0A11C9ED6EA00536DED /* LICENSE */,
 				A77238B91C95AE70006E9657 /* Equals */,
 				A77238C71C95AEB2006E9657 /* EqualsTests */,
 				A749F04C1C95C56800536DED /* Equals-OSX */,
@@ -889,7 +893,7 @@
 		A77238CF1C95AEB2006E9657 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = EqualsTests/Info.plist;
+				INFOPLIST_FILE = Tests/Equals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.quist.EqualsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -899,7 +903,7 @@
 		A77238D01C95AEB2006E9657 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = EqualsTests/Info.plist;
+				INFOPLIST_FILE = Tests/Equals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.quist.EqualsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
