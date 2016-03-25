@@ -4,4 +4,5 @@ import XCTest
 XCTMain([
     EqualsTests(),
     HashesTests(),
+    DescribesTests(),
 ])
