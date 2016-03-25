@@ -1,5 +1,5 @@
 import XCTest
-@testable import Equals
+import Equals
 
 private struct Person {
     let firstName: String?
