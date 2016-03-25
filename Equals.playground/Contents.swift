@@ -58,3 +58,34 @@ tom.hashValue == steve.hashValue // => false
 In fact, `EqualsHashable` is a descendant of `EqualsEquatable`. So if you conform to `EqualsHashable`,
 you don't have to provide an `equals` property.
 */
+
+/*:
+## CustomStringConvertible
+Now we need a string representation of our Person struct. This is as simple as
+making the type equatable. Simply let's conform to EqualsCustomStringConvertible
+*/
+extension Person: EqualsCustomStringConvertible {
+    static let describes: Describes<Person> = Describes()
+        .append("firstName") { $0.firstName }
+        .append("lastName") { $0.lastName }
+        .append("age") {$0.age}
+}
+
+print(tom.description)
+print(steve.description)
+
+/*:
+## DebugStringConvertible
+To get a debug string representation, simply conform to `EqualsDebugStringConvertible`.
+By default, when the type also conforms to `EqualsCustomStringConvertible`, the same
+`Describes`-Helper is used, but you can also provide a different one:
+*/
+extension Person: EqualsDebugStringConvertible {
+    static let debugDescribes: Describes<Person> = Describes()
+        .append("firstName") { $0.firstName }
+        .append("middleNames") { $0.middleNames }
+        .append("lastName") { $0.lastName }
+        .append("age") {$0.age}
+}
+print(steve.debugDescription)
+
