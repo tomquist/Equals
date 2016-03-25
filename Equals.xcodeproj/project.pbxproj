@@ -28,6 +28,10 @@
 		A749F09D1C95C6F400536DED /* Equals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D11C95AEF1006E9657 /* Equals.swift */; };
 		A749F09E1C95C6F400536DED /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
 		A749F09F1C95C6F400536DED /* HashableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D51C95B175006E9657 /* HashableHelper.swift */; };
+		A76E2FBD1CA57CE50059E811 /* Compares.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76E2FBC1CA57CE50059E811 /* Compares.swift */; };
+		A76E2FBE1CA57CE50059E811 /* Compares.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76E2FBC1CA57CE50059E811 /* Compares.swift */; };
+		A76E2FBF1CA57CE50059E811 /* Compares.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76E2FBC1CA57CE50059E811 /* Compares.swift */; };
+		A76E2FC01CA57CE50059E811 /* Compares.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76E2FBC1CA57CE50059E811 /* Compares.swift */; };
 		A77238BB1C95AE70006E9657 /* Equals.h in Headers */ = {isa = PBXBuildFile; fileRef = A77238BA1C95AE70006E9657 /* Equals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A77238C91C95AEB2006E9657 /* EqualsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests.swift */; };
 		A77238CB1C95AEB2006E9657 /* Equals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77238B71C95AE70006E9657 /* Equals.framework */; };
@@ -77,6 +81,7 @@
 		A749F0A11C9ED6EA00536DED /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A76E2FC51CA58FDD0059E811 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = Tests/LinuxMain.swift; sourceTree = SOURCE_ROOT; };
 		A76E2FC61CA5948B0059E811 /* Equals.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Equals.playground; sourceTree = "<group>"; };
+		A76E2FBC1CA57CE50059E811 /* Compares.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compares.swift; sourceTree = "<group>"; };
 		A77238B71C95AE70006E9657 /* Equals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Equals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77238BA1C95AE70006E9657 /* Equals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Equals.h; sourceTree = "<group>"; };
 		A77238BC1C95AE70006E9657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,6 +229,7 @@
 				A77238D11C95AEF1006E9657 /* Equals.swift */,
 				A77238D31C95AF1E006E9657 /* EquatableHelper.swift */,
 				A77238D51C95B175006E9657 /* HashableHelper.swift */,
+				A76E2FBC1CA57CE50059E811 /* Compares.swift */,
 			);
 			name = Equals;
 			path = Sources/Equals;
@@ -522,6 +528,7 @@
 				A749F0641C95C59100536DED /* EquatableHelper.swift in Sources */,
 				A749F0631C95C59100536DED /* Equals.swift in Sources */,
 				A749F0651C95C59100536DED /* HashableHelper.swift in Sources */,
+				A76E2FBE1CA57CE50059E811 /* Compares.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +549,7 @@
 				A749F0871C95C65900536DED /* EquatableHelper.swift in Sources */,
 				A749F0861C95C65900536DED /* Equals.swift in Sources */,
 				A749F0881C95C65900536DED /* HashableHelper.swift in Sources */,
+				A76E2FBF1CA57CE50059E811 /* Compares.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +570,7 @@
 				A749F09E1C95C6F400536DED /* EquatableHelper.swift in Sources */,
 				A749F09D1C95C6F400536DED /* Equals.swift in Sources */,
 				A749F09F1C95C6F400536DED /* HashableHelper.swift in Sources */,
+				A76E2FC01CA57CE50059E811 /* Compares.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +581,7 @@
 				A77238D41C95AF1E006E9657 /* EquatableHelper.swift in Sources */,
 				A77238D21C95AEF1006E9657 /* Equals.swift in Sources */,
 				A77238D61C95B175006E9657 /* HashableHelper.swift in Sources */,
+				A76E2FBD1CA57CE50059E811 /* Compares.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
