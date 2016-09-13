@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A77238B61C95AE70006E9657"
                BuildableName = "Equals.framework"
-               BlueprintName = "Equals-iOS"
+               BlueprintName = "Equals"
                ReferencedContainer = "container:Equals.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A77238C51C95AEB2006E9657"
-               BuildableName = "Equals-iOS Tests.xctest"
-               BlueprintName = "Equals-iOS Tests"
+               BuildableName = "Equals Tests.xctest"
+               BlueprintName = "Equals Tests"
                ReferencedContainer = "container:Equals.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A77238B61C95AE70006E9657"
             BuildableName = "Equals.framework"
-            BlueprintName = "Equals-iOS"
+            BlueprintName = "Equals"
             ReferencedContainer = "container:Equals.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A77238B61C95AE70006E9657"
             BuildableName = "Equals.framework"
-            BlueprintName = "Equals-iOS"
+            BlueprintName = "Equals"
             ReferencedContainer = "container:Equals.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,7 +85,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A77238B61C95AE70006E9657"
             BuildableName = "Equals.framework"
-            BlueprintName = "Equals-iOS"
+            BlueprintName = "Equals"
             ReferencedContainer = "container:Equals.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

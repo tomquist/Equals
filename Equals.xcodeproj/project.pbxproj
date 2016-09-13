@@ -8,50 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A749F0451C95C08900536DED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749F0441C95C08900536DED /* Utils.swift */; };
-		A749F0551C95C56800536DED /* Equals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A749F04B1C95C56700536DED /* Equals.framework */; };
-		A749F0621C95C58900536DED /* Equals.h in Headers */ = {isa = PBXBuildFile; fileRef = A77238BA1C95AE70006E9657 /* Equals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A749F0631C95C59100536DED /* Equals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D11C95AEF1006E9657 /* Equals.swift */; };
-		A749F0641C95C59100536DED /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
-		A749F0651C95C59100536DED /* HashableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D51C95B175006E9657 /* HashableHelper.swift */; };
-		A749F0661C95C59800536DED /* EqualsTests in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests */; };
-		A749F0671C95C59800536DED /* HashesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D71C95B908006E9657 /* HashesTests.swift */; };
-		A749F0681C95C59800536DED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749F0441C95C08900536DED /* Utils.swift */; };
-		A749F0781C95C61E00536DED /* Equals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A749F06E1C95C61D00536DED /* Equals.framework */; };
-		A749F0851C95C65900536DED /* Equals.h in Headers */ = {isa = PBXBuildFile; fileRef = A77238BA1C95AE70006E9657 /* Equals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A749F0861C95C65900536DED /* Equals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D11C95AEF1006E9657 /* Equals.swift */; };
-		A749F0871C95C65900536DED /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
-		A749F0881C95C65900536DED /* HashableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D51C95B175006E9657 /* HashableHelper.swift */; };
-		A749F08C1C95C66000536DED /* EqualsTests in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests */; };
-		A749F08D1C95C66000536DED /* HashesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D71C95B908006E9657 /* HashesTests.swift */; };
-		A749F08E1C95C66000536DED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749F0441C95C08900536DED /* Utils.swift */; };
-		A749F09C1C95C6F400536DED /* Equals.h in Headers */ = {isa = PBXBuildFile; fileRef = A77238BA1C95AE70006E9657 /* Equals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A749F09D1C95C6F400536DED /* Equals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D11C95AEF1006E9657 /* Equals.swift */; };
-		A749F09E1C95C6F400536DED /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
-		A749F09F1C95C6F400536DED /* HashableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D51C95B175006E9657 /* HashableHelper.swift */; };
 		A77238BB1C95AE70006E9657 /* Equals.h in Headers */ = {isa = PBXBuildFile; fileRef = A77238BA1C95AE70006E9657 /* Equals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A77238C91C95AEB2006E9657 /* EqualsTests in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests */; };
 		A77238CB1C95AEB2006E9657 /* Equals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77238B71C95AE70006E9657 /* Equals.framework */; };
 		A77238D21C95AEF1006E9657 /* Equals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D11C95AEF1006E9657 /* Equals.swift */; };
 		A77238D41C95AF1E006E9657 /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
 		A77238D61C95B175006E9657 /* HashableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D51C95B175006E9657 /* HashableHelper.swift */; };
 		A77238D91C95B96D006E9657 /* HashesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D71C95B908006E9657 /* HashesTests.swift */; };
+		A774F37A1D88843700FA874E /* EqualsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774F3791D88843700FA874E /* EqualsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A749F0561C95C56800536DED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A77238AE1C95AE70006E9657 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A749F04A1C95C56700536DED;
-			remoteInfo = "Equals-OSX";
-		};
-		A749F0791C95C61E00536DED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A77238AE1C95AE70006E9657 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A749F06D1C95C61D00536DED;
-			remoteInfo = "Equals-tvOS";
-		};
 		A77238CC1C95AEB2006E9657 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A77238AE1C95AE70006E9657 /* Project object */;
@@ -63,16 +29,6 @@
 
 /* Begin PBXFileReference section */
 		A749F0441C95C08900536DED /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../EqualsTests/Utils.swift; sourceTree = "<group>"; };
-		A749F04B1C95C56700536DED /* Equals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Equals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A749F04F1C95C56800536DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A749F0541C95C56800536DED /* Equals-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equals-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A749F05B1C95C56800536DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A749F06E1C95C61D00536DED /* Equals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Equals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A749F0721C95C61D00536DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A749F0771C95C61D00536DED /* Equals-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equals-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A749F07E1C95C61E00536DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A749F0941C95C6BD00536DED /* Equals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Equals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A749F0981C95C6BD00536DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A749F0A01C9ED6A600536DED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A749F0A11C9ED6EA00536DED /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A76E2FC51CA58FDD0059E811 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = Tests/LinuxMain.swift; sourceTree = SOURCE_ROOT; };
@@ -80,53 +36,16 @@
 		A77238B71C95AE70006E9657 /* Equals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Equals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77238BA1C95AE70006E9657 /* Equals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Equals.h; sourceTree = "<group>"; };
 		A77238BC1C95AE70006E9657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A77238C61C95AEB2006E9657 /* Equals-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equals-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A77238C81C95AEB2006E9657 /* EqualsTests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EqualsTests; path = ../EqualsTests; sourceTree = "<group>"; };
-		A77238CA1C95AEB2006E9657 /* EqualsTests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EqualsTests; path = ../EqualsTests; sourceTree = "<group>"; };
+		A77238C61C95AEB2006E9657 /* Equals Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equals Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77238D11C95AEF1006E9657 /* Equals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equals.swift; sourceTree = "<group>"; };
 		A77238D31C95AF1E006E9657 /* EquatableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableHelper.swift; sourceTree = "<group>"; };
 		A77238D51C95B175006E9657 /* HashableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableHelper.swift; sourceTree = "<group>"; };
 		A77238D71C95B908006E9657 /* HashesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HashesTests.swift; path = ../EqualsTests/HashesTests.swift; sourceTree = "<group>"; };
+		A774F3771D88842500FA874E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A774F3791D88843700FA874E /* EqualsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A749F0471C95C56700536DED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0511C95C56800536DED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F0551C95C56800536DED /* Equals.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F06A1C95C61D00536DED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0741C95C61D00536DED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F0781C95C61E00536DED /* Equals.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0901C95C6BD00536DED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A77238B31C95AE70006E9657 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,46 +64,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A749F04C1C95C56800536DED /* Equals-OSX */ = {
-			isa = PBXGroup;
-			children = (
-				A749F04F1C95C56800536DED /* Info.plist */,
-			);
-			path = "Equals-OSX";
-			sourceTree = "<group>";
-		};
-		A749F0581C95C56800536DED /* Equals-OSXTests */ = {
-			isa = PBXGroup;
-			children = (
-				A749F05B1C95C56800536DED /* Info.plist */,
-			);
-			path = "Equals-OSXTests";
-			sourceTree = "<group>";
-		};
-		A749F06F1C95C61D00536DED /* Equals-tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				A749F0721C95C61D00536DED /* Info.plist */,
-			);
-			path = "Equals-tvOS";
-			sourceTree = "<group>";
-		};
-		A749F07B1C95C61E00536DED /* Equals-tvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				A749F07E1C95C61E00536DED /* Info.plist */,
-			);
-			path = "Equals-tvOSTests";
-			sourceTree = "<group>";
-		};
-		A749F0951C95C6BD00536DED /* Equals-watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				A749F0981C95C6BD00536DED /* Info.plist */,
-			);
-			path = "Equals-watchOS";
-			sourceTree = "<group>";
-		};
 		A77238AD1C95AE70006E9657 = {
 			isa = PBXGroup;
 			children = (
@@ -193,11 +72,6 @@
 				A749F0A11C9ED6EA00536DED /* LICENSE */,
 				A77238B91C95AE70006E9657 /* Equals */,
 				A77238C71C95AEB2006E9657 /* EqualsTests */,
-				A749F04C1C95C56800536DED /* Equals-OSX */,
-				A749F0581C95C56800536DED /* Equals-OSXTests */,
-				A749F06F1C95C61D00536DED /* Equals-tvOS */,
-				A749F07B1C95C61E00536DED /* Equals-tvOSTests */,
-				A749F0951C95C6BD00536DED /* Equals-watchOS */,
 				A77238B81C95AE70006E9657 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -206,12 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A77238B71C95AE70006E9657 /* Equals.framework */,
-				A77238C61C95AEB2006E9657 /* Equals-iOS Tests.xctest */,
-				A749F04B1C95C56700536DED /* Equals.framework */,
-				A749F0541C95C56800536DED /* Equals-OSXTests.xctest */,
-				A749F06E1C95C61D00536DED /* Equals.framework */,
-				A749F0771C95C61D00536DED /* Equals-tvOSTests.xctest */,
-				A749F0941C95C6BD00536DED /* Equals.framework */,
+				A77238C61C95AEB2006E9657 /* Equals Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,10 +101,10 @@
 		A77238C71C95AEB2006E9657 /* EqualsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A76E2FC51CA58FDD0059E811 /* LinuxMain.swift */,
-				A77238C81C95AEB2006E9657 /* EqualsTests */,
-				A77238CA1C95AEB2006E9657 /* EqualsTests */,
+				A774F3791D88843700FA874E /* EqualsTests.swift */,
 				A77238D71C95B908006E9657 /* HashesTests.swift */,
+				A774F3771D88842500FA874E /* Info.plist */,
+				A76E2FC51CA58FDD0059E811 /* LinuxMain.swift */,
 				A749F0441C95C08900536DED /* Utils.swift */,
 			);
 			name = EqualsTests;
@@ -245,30 +114,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A749F0481C95C56700536DED /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F0621C95C58900536DED /* Equals.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F06B1C95C61D00536DED /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F0851C95C65900536DED /* Equals.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0911C95C6BD00536DED /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F09C1C95C6F400536DED /* Equals.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A77238B41C95AE70006E9657 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,99 +125,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A749F04A1C95C56700536DED /* Equals-OSX */ = {
+		A77238B61C95AE70006E9657 /* Equals */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A749F05C1C95C56800536DED /* Build configuration list for PBXNativeTarget "Equals-OSX" */;
-			buildPhases = (
-				A749F0461C95C56700536DED /* Sources */,
-				A749F0471C95C56700536DED /* Frameworks */,
-				A749F0481C95C56700536DED /* Headers */,
-				A749F0491C95C56700536DED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Equals-OSX";
-			productName = "Equals-OSX";
-			productReference = A749F04B1C95C56700536DED /* Equals.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A749F0531C95C56800536DED /* Equals-OSXTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A749F05F1C95C56800536DED /* Build configuration list for PBXNativeTarget "Equals-OSXTests" */;
-			buildPhases = (
-				A749F0501C95C56800536DED /* Sources */,
-				A749F0511C95C56800536DED /* Frameworks */,
-				A749F0521C95C56800536DED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A749F0571C95C56800536DED /* PBXTargetDependency */,
-			);
-			name = "Equals-OSXTests";
-			productName = "Equals-OSXTests";
-			productReference = A749F0541C95C56800536DED /* Equals-OSXTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A749F06D1C95C61D00536DED /* Equals-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A749F07F1C95C61E00536DED /* Build configuration list for PBXNativeTarget "Equals-tvOS" */;
-			buildPhases = (
-				A749F0691C95C61D00536DED /* Sources */,
-				A749F06A1C95C61D00536DED /* Frameworks */,
-				A749F06B1C95C61D00536DED /* Headers */,
-				A749F06C1C95C61D00536DED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Equals-tvOS";
-			productName = "Equals-tvOS";
-			productReference = A749F06E1C95C61D00536DED /* Equals.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A749F0761C95C61D00536DED /* Equals-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A749F0821C95C61E00536DED /* Build configuration list for PBXNativeTarget "Equals-tvOSTests" */;
-			buildPhases = (
-				A749F0731C95C61D00536DED /* Sources */,
-				A749F0741C95C61D00536DED /* Frameworks */,
-				A749F0751C95C61D00536DED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A749F07A1C95C61E00536DED /* PBXTargetDependency */,
-			);
-			name = "Equals-tvOSTests";
-			productName = "Equals-tvOSTests";
-			productReference = A749F0771C95C61D00536DED /* Equals-tvOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A749F0931C95C6BD00536DED /* Equals-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A749F0991C95C6BD00536DED /* Build configuration list for PBXNativeTarget "Equals-watchOS" */;
-			buildPhases = (
-				A749F08F1C95C6BD00536DED /* Sources */,
-				A749F0901C95C6BD00536DED /* Frameworks */,
-				A749F0911C95C6BD00536DED /* Headers */,
-				A749F0921C95C6BD00536DED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Equals-watchOS";
-			productName = "Equals-watchOS";
-			productReference = A749F0941C95C6BD00536DED /* Equals.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A77238B61C95AE70006E9657 /* Equals-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A77238BF1C95AE70006E9657 /* Build configuration list for PBXNativeTarget "Equals-iOS" */;
+			buildConfigurationList = A77238BF1C95AE70006E9657 /* Build configuration list for PBXNativeTarget "Equals" */;
 			buildPhases = (
 				A77238B21C95AE70006E9657 /* Sources */,
 				A77238B31C95AE70006E9657 /* Frameworks */,
@@ -383,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = "Equals-iOS";
+			name = Equals;
 			productName = Equals;
 			productReference = A77238B71C95AE70006E9657 /* Equals.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A77238C51C95AEB2006E9657 /* Equals-iOS Tests */ = {
+		A77238C51C95AEB2006E9657 /* Equals Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A77238CE1C95AEB2006E9657 /* Build configuration list for PBXNativeTarget "Equals-iOS Tests" */;
+			buildConfigurationList = A77238CE1C95AEB2006E9657 /* Build configuration list for PBXNativeTarget "Equals Tests" */;
 			buildPhases = (
 				A77238C21C95AEB2006E9657 /* Sources */,
 				A77238C31C95AEB2006E9657 /* Frameworks */,
@@ -401,9 +156,9 @@
 			dependencies = (
 				A77238CD1C95AEB2006E9657 /* PBXTargetDependency */,
 			);
-			name = "Equals-iOS Tests";
+			name = "Equals Tests";
 			productName = EqualsTests;
-			productReference = A77238C61C95AEB2006E9657 /* Equals-iOS Tests.xctest */;
+			productReference = A77238C61C95AEB2006E9657 /* Equals Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -416,26 +171,6 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Tom Quist";
 				TargetAttributes = {
-					A749F04A1C95C56700536DED = {
-						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
-					};
-					A749F0531C95C56800536DED = {
-						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
-					};
-					A749F06D1C95C61D00536DED = {
-						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
-					};
-					A749F0761C95C61D00536DED = {
-						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
-					};
-					A749F0931C95C6BD00536DED = {
-						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
-					};
 					A77238B61C95AE70006E9657 = {
 						CreatedOnToolsVersion = 7.2.1;
 						LastSwiftMigration = 0800;
@@ -458,53 +193,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A77238B61C95AE70006E9657 /* Equals-iOS */,
-				A77238C51C95AEB2006E9657 /* Equals-iOS Tests */,
-				A749F04A1C95C56700536DED /* Equals-OSX */,
-				A749F0531C95C56800536DED /* Equals-OSXTests */,
-				A749F06D1C95C61D00536DED /* Equals-tvOS */,
-				A749F0761C95C61D00536DED /* Equals-tvOSTests */,
-				A749F0931C95C6BD00536DED /* Equals-watchOS */,
+				A77238B61C95AE70006E9657 /* Equals */,
+				A77238C51C95AEB2006E9657 /* Equals Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A749F0491C95C56700536DED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0521C95C56800536DED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F06C1C95C61D00536DED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0751C95C61D00536DED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0921C95C6BD00536DED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A77238B51C95AE70006E9657 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,56 +217,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A749F0461C95C56700536DED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F0641C95C59100536DED /* EquatableHelper.swift in Sources */,
-				A749F0631C95C59100536DED /* Equals.swift in Sources */,
-				A749F0651C95C59100536DED /* HashableHelper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0501C95C56800536DED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F0661C95C59800536DED /* EqualsTests in Sources */,
-				A749F0671C95C59800536DED /* HashesTests.swift in Sources */,
-				A749F0681C95C59800536DED /* Utils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0691C95C61D00536DED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F0871C95C65900536DED /* EquatableHelper.swift in Sources */,
-				A749F0861C95C65900536DED /* Equals.swift in Sources */,
-				A749F0881C95C65900536DED /* HashableHelper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F0731C95C61D00536DED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F08D1C95C66000536DED /* HashesTests.swift in Sources */,
-				A749F08C1C95C66000536DED /* EqualsTests in Sources */,
-				A749F08E1C95C66000536DED /* Utils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A749F08F1C95C6BD00536DED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A749F09E1C95C6F400536DED /* EquatableHelper.swift in Sources */,
-				A749F09D1C95C6F400536DED /* Equals.swift in Sources */,
-				A749F09F1C95C6F400536DED /* HashableHelper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A77238B21C95AE70006E9657 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,8 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A77238C91C95AEB2006E9657 /* EqualsTests in Sources */,
 				A77238D91C95B96D006E9657 /* HashesTests.swift in Sources */,
+				A774F37A1D88843700FA874E /* EqualsTests.swift in Sources */,
 				A749F0451C95C08900536DED /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,194 +240,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A749F0571C95C56800536DED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A749F04A1C95C56700536DED /* Equals-OSX */;
-			targetProxy = A749F0561C95C56800536DED /* PBXContainerItemProxy */;
-		};
-		A749F07A1C95C61E00536DED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A749F06D1C95C61D00536DED /* Equals-tvOS */;
-			targetProxy = A749F0791C95C61E00536DED /* PBXContainerItemProxy */;
-		};
 		A77238CD1C95AEB2006E9657 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A77238B61C95AE70006E9657 /* Equals-iOS */;
+			target = A77238B61C95AE70006E9657 /* Equals */;
 			targetProxy = A77238CC1C95AEB2006E9657 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A749F05D1C95C56800536DED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Equals-OSX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		A749F05E1C95C56800536DED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Equals-OSX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		A749F0601C95C56800536DED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Equals-OSXTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.quist.Equals-OSXTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		A749F0611C95C56800536DED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Equals-OSXTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.quist.Equals-OSXTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		A749F0801C95C61E00536DED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Equals-tvOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Debug;
-		};
-		A749F0811C95C61E00536DED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Equals-tvOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Release;
-		};
-		A749F0831C95C61E00536DED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Equals-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.quist.Equals-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		A749F0841C95C61E00536DED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Equals-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.quist.Equals-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
-		A749F09A1C95C6BD00536DED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Equals-watchOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Debug;
-		};
-		A749F09B1C95C6BD00536DED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Equals-watchOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Release;
-		};
 		A77238BD1C95AE70006E9657 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -824,14 +289,16 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks\n@executable_path/Frameworks\n@loader_path/../Frameworks\n@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.quist.Equals;
 				PRODUCT_NAME = Equals;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -874,13 +341,15 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks\n@executable_path/Frameworks\n@loader_path/../Frameworks\n@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = de.quist.Equals;
 				PRODUCT_NAME = Equals;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -900,7 +369,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/Equals/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -918,7 +386,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/Equals/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -928,7 +395,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/EqualsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.quist.EqualsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -939,7 +405,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/EqualsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.quist.EqualsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -949,51 +414,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A749F05C1C95C56800536DED /* Build configuration list for PBXNativeTarget "Equals-OSX" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A749F05D1C95C56800536DED /* Debug */,
-				A749F05E1C95C56800536DED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A749F05F1C95C56800536DED /* Build configuration list for PBXNativeTarget "Equals-OSXTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A749F0601C95C56800536DED /* Debug */,
-				A749F0611C95C56800536DED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A749F07F1C95C61E00536DED /* Build configuration list for PBXNativeTarget "Equals-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A749F0801C95C61E00536DED /* Debug */,
-				A749F0811C95C61E00536DED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A749F0821C95C61E00536DED /* Build configuration list for PBXNativeTarget "Equals-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A749F0831C95C61E00536DED /* Debug */,
-				A749F0841C95C61E00536DED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A749F0991C95C6BD00536DED /* Build configuration list for PBXNativeTarget "Equals-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A749F09A1C95C6BD00536DED /* Debug */,
-				A749F09B1C95C6BD00536DED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A77238B11C95AE70006E9657 /* Build configuration list for PBXProject "Equals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1003,7 +423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A77238BF1C95AE70006E9657 /* Build configuration list for PBXNativeTarget "Equals-iOS" */ = {
+		A77238BF1C95AE70006E9657 /* Build configuration list for PBXNativeTarget "Equals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A77238C01C95AE70006E9657 /* Debug */,
@@ -1012,7 +432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A77238CE1C95AEB2006E9657 /* Build configuration list for PBXNativeTarget "Equals-iOS Tests" */ = {
+		A77238CE1C95AEB2006E9657 /* Build configuration list for PBXNativeTarget "Equals Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A77238CF1C95AEB2006E9657 /* Debug */,
