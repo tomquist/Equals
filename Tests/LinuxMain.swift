@@ -1,7 +1,7 @@
 import XCTest
-@testable import Equalstest
+@testable import EqualsTest
 
 XCTMain([
-    EqualsTests(),
-    HashesTests(),
+    testCase(EqualsTests.allTests),
+    testCase(HashesTests.allTests),
 ])

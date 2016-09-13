@@ -17,9 +17,9 @@ extension Person: EqualsHashable {
         .append(hashable: {$0.children})
 }
 
-class HashesTests: XCTestCase, XCTestCaseProvider {
+class HashesTests: XCTestCase {
     
-    var allTests: [(String, () throws -> Void)] {
+    static var allTests: [(String, (HashesTests) -> () throws -> Void)] {
         return [
             ("testInitialAndConstantValue", testInitialAndConstantValue),
             ("testEqualPersons", testEqualPersons),

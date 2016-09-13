@@ -13,7 +13,7 @@
 		A749F0631C95C59100536DED /* Equals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D11C95AEF1006E9657 /* Equals.swift */; };
 		A749F0641C95C59100536DED /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
 		A749F0651C95C59100536DED /* HashableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D51C95B175006E9657 /* HashableHelper.swift */; };
-		A749F0661C95C59800536DED /* EqualsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests.swift */; };
+		A749F0661C95C59800536DED /* EqualsTests in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests */; };
 		A749F0671C95C59800536DED /* HashesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D71C95B908006E9657 /* HashesTests.swift */; };
 		A749F0681C95C59800536DED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749F0441C95C08900536DED /* Utils.swift */; };
 		A749F0781C95C61E00536DED /* Equals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A749F06E1C95C61D00536DED /* Equals.framework */; };
@@ -21,7 +21,7 @@
 		A749F0861C95C65900536DED /* Equals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D11C95AEF1006E9657 /* Equals.swift */; };
 		A749F0871C95C65900536DED /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
 		A749F0881C95C65900536DED /* HashableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D51C95B175006E9657 /* HashableHelper.swift */; };
-		A749F08C1C95C66000536DED /* EqualsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests.swift */; };
+		A749F08C1C95C66000536DED /* EqualsTests in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests */; };
 		A749F08D1C95C66000536DED /* HashesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D71C95B908006E9657 /* HashesTests.swift */; };
 		A749F08E1C95C66000536DED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749F0441C95C08900536DED /* Utils.swift */; };
 		A749F09C1C95C6F400536DED /* Equals.h in Headers */ = {isa = PBXBuildFile; fileRef = A77238BA1C95AE70006E9657 /* Equals.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,7 +29,7 @@
 		A749F09E1C95C6F400536DED /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
 		A749F09F1C95C6F400536DED /* HashableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D51C95B175006E9657 /* HashableHelper.swift */; };
 		A77238BB1C95AE70006E9657 /* Equals.h in Headers */ = {isa = PBXBuildFile; fileRef = A77238BA1C95AE70006E9657 /* Equals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A77238C91C95AEB2006E9657 /* EqualsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests.swift */; };
+		A77238C91C95AEB2006E9657 /* EqualsTests in Sources */ = {isa = PBXBuildFile; fileRef = A77238C81C95AEB2006E9657 /* EqualsTests */; };
 		A77238CB1C95AEB2006E9657 /* Equals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77238B71C95AE70006E9657 /* Equals.framework */; };
 		A77238D21C95AEF1006E9657 /* Equals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D11C95AEF1006E9657 /* Equals.swift */; };
 		A77238D41C95AF1E006E9657 /* EquatableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77238D31C95AF1E006E9657 /* EquatableHelper.swift */; };
@@ -62,7 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A749F0441C95C08900536DED /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A749F0441C95C08900536DED /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../EqualsTests/Utils.swift; sourceTree = "<group>"; };
 		A749F04B1C95C56700536DED /* Equals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Equals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A749F04F1C95C56800536DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A749F0541C95C56800536DED /* Equals-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equals-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,12 +81,12 @@
 		A77238BA1C95AE70006E9657 /* Equals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Equals.h; sourceTree = "<group>"; };
 		A77238BC1C95AE70006E9657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A77238C61C95AEB2006E9657 /* Equals-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equals-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A77238C81C95AEB2006E9657 /* EqualsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualsTests.swift; sourceTree = "<group>"; };
-		A77238CA1C95AEB2006E9657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A77238C81C95AEB2006E9657 /* EqualsTests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EqualsTests; path = ../EqualsTests; sourceTree = "<group>"; };
+		A77238CA1C95AEB2006E9657 /* EqualsTests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EqualsTests; path = ../EqualsTests; sourceTree = "<group>"; };
 		A77238D11C95AEF1006E9657 /* Equals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equals.swift; sourceTree = "<group>"; };
 		A77238D31C95AF1E006E9657 /* EquatableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableHelper.swift; sourceTree = "<group>"; };
 		A77238D51C95B175006E9657 /* HashableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableHelper.swift; sourceTree = "<group>"; };
-		A77238D71C95B908006E9657 /* HashesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashesTests.swift; sourceTree = "<group>"; };
+		A77238D71C95B908006E9657 /* HashesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HashesTests.swift; path = ../EqualsTests/HashesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,13 +233,13 @@
 			isa = PBXGroup;
 			children = (
 				A76E2FC51CA58FDD0059E811 /* LinuxMain.swift */,
-				A77238C81C95AEB2006E9657 /* EqualsTests.swift */,
-				A77238CA1C95AEB2006E9657 /* Info.plist */,
+				A77238C81C95AEB2006E9657 /* EqualsTests */,
+				A77238CA1C95AEB2006E9657 /* EqualsTests */,
 				A77238D71C95B908006E9657 /* HashesTests.swift */,
 				A749F0441C95C08900536DED /* Utils.swift */,
 			);
 			name = EqualsTests;
-			path = Tests/Equals;
+			path = Tests/EqualsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,7 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A749F0661C95C59800536DED /* EqualsTests.swift in Sources */,
+				A749F0661C95C59800536DED /* EqualsTests in Sources */,
 				A749F0671C95C59800536DED /* HashesTests.swift in Sources */,
 				A749F0681C95C59800536DED /* Utils.swift in Sources */,
 			);
@@ -557,7 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A749F08D1C95C66000536DED /* HashesTests.swift in Sources */,
-				A749F08C1C95C66000536DED /* EqualsTests.swift in Sources */,
+				A749F08C1C95C66000536DED /* EqualsTests in Sources */,
 				A749F08E1C95C66000536DED /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,7 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A77238C91C95AEB2006E9657 /* EqualsTests.swift in Sources */,
+				A77238C91C95AEB2006E9657 /* EqualsTests in Sources */,
 				A77238D91C95B96D006E9657 /* HashesTests.swift in Sources */,
 				A749F0451C95C08900536DED /* Utils.swift in Sources */,
 			);
@@ -927,7 +927,7 @@
 		A77238CF1C95AEB2006E9657 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Equals/Info.plist;
+				INFOPLIST_FILE = Tests/EqualsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.quist.EqualsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -938,7 +938,7 @@
 		A77238D01C95AEB2006E9657 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Equals/Info.plist;
+				INFOPLIST_FILE = Tests/EqualsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.quist.EqualsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

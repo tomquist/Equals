@@ -16,9 +16,9 @@ extension Person: EqualsEquatable {
         .append {$0.sequence}
 }
 
-class EqualsTests: XCTestCase, XCTestCaseProvider {
+class EqualsTests: XCTestCase {
     
-    var allTests: [(String, () throws -> Void)] {
+    static var allTests: [(String, (EqualsTests) -> () throws -> Void)] {
         return [
             ("testEqualPersons", testEqualPersons),
             ("testEqualPersonsWithDifferentFirstName", testEqualPersonsWithDifferentFirstName),

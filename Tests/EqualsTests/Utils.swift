@@ -14,9 +14,3 @@ extension TestSequence: ExpressibleByArrayLiteral {
     }
 
 }
-
-#if os(OSX) || os(iOS) || os(watchOS) || os(tvOS)
-    public protocol XCTestCaseProvider {
-        var allTests: [(String, () throws -> Void)] { get }
-    }
-#endif
