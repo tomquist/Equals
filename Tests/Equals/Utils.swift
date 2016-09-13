@@ -1,14 +1,14 @@
-struct Sequence<T>: SequenceType {
-    private let items: [T]
+struct TestSequence<T>: Sequence {
+    fileprivate let items: [T]
     init(_ items: [T]) {
         self.items = items
     }
-    func generate() -> IndexingGenerator<[T]> {
-        return items.generate()
+    func makeIterator() -> IndexingIterator<[T]> {
+        return items.makeIterator()
     }
 }
 
-extension Sequence: ArrayLiteralConvertible {
+extension TestSequence: ExpressibleByArrayLiteral {
     init(arrayLiteral elements: T...) {
         self.init(elements)
     }

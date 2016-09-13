@@ -6,7 +6,7 @@ private struct Person {
     let lastName: String
     let middleNames: [String]
     let children: Set<Person>
-    let sequence: Sequence<Int>
+    let sequence: TestSequence<Int>
 }
 extension Person: EqualsHashable {
     static let hashes: Hashes<Person> = Hashes()

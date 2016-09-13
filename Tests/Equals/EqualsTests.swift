@@ -5,7 +5,7 @@ private struct Person {
     let firstName: String?
     let lastName: String
     let children: [Person]
-    let sequence: Sequence<Int>
+    let sequence: TestSequence<Int>
 }
 
 extension Person: EqualsEquatable {
