@@ -1,5 +1,5 @@
 import XCTest
-@testable import EqualsTest
+@testable import EqualsTests
 
 XCTMain([
     testCase(EqualsTests.allTests),
