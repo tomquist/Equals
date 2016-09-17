@@ -43,6 +43,7 @@
 		A77238D71C95B908006E9657 /* HashesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HashesTests.swift; path = ../EqualsTests/HashesTests.swift; sourceTree = "<group>"; };
 		A774F3771D88842500FA874E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A774F3791D88843700FA874E /* EqualsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualsTests.swift; sourceTree = "<group>"; };
+		A7F2DF311D8D25A300458CAC /* Equals.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Equals.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 		A77238AD1C95AE70006E9657 = {
 			isa = PBXGroup;
 			children = (
+				A7F2DF311D8D25A300458CAC /* Equals.podspec */,
 				A76E2FC61CA5948B0059E811 /* Equals.playground */,
 				A749F0A01C9ED6A600536DED /* README.md */,
 				A749F0A11C9ED6EA00536DED /* LICENSE */,
