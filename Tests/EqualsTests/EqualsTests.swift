@@ -5,7 +5,7 @@ private struct Person {
     let firstName: String?
     let lastName: String
     let children: [Person]
-    let sequence: Sequence<Int>
+    let sequence: TestSequence<Int>
 }
 
 extension Person: EqualsEquatable {
@@ -16,9 +16,9 @@ extension Person: EqualsEquatable {
         .append {$0.sequence}
 }
 
-class EqualsTests: XCTestCase, XCTestCaseProvider {
+class EqualsTests: XCTestCase {
     
-    var allTests: [(String, () throws -> Void)] {
+    static var allTests: [(String, (EqualsTests) -> () throws -> Void)] {
         return [
             ("testEqualPersons", testEqualPersons),
             ("testEqualPersonsWithDifferentFirstName", testEqualPersonsWithDifferentFirstName),

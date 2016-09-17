@@ -6,7 +6,7 @@ private struct Person {
     let lastName: String
     let middleNames: [String]
     let children: Set<Person>
-    let sequence: Sequence<Int>
+    let sequence: TestSequence<Int>
 }
 extension Person: EqualsHashable {
     static let hashes: Hashes<Person> = Hashes()
@@ -17,9 +17,9 @@ extension Person: EqualsHashable {
         .append(hashable: {$0.children})
 }
 
-class HashesTests: XCTestCase, XCTestCaseProvider {
+class HashesTests: XCTestCase {
     
-    var allTests: [(String, () throws -> Void)] {
+    static var allTests: [(String, (HashesTests) -> () throws -> Void)] {
         return [
             ("testInitialAndConstantValue", testInitialAndConstantValue),
             ("testEqualPersons", testEqualPersons),

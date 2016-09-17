@@ -12,14 +12,15 @@ function xcode_tests {
         set -e;
         
         
-        XCB1='xcodebuild test -project Equals.xcodeproj -scheme Equals-OSX -destination "platform=OS X"'
-        XCB2='xcodebuild test -project Equals.xcodeproj -scheme Equals-iOS -destination "platform=iOS Simulator,name=iPhone 6,OS=9.2"'
-        XCB3='xcodebuild test -project Equals.xcodeproj -scheme Equals-tvOS -destination "platform=tvOS Simulator,name=Apple TV 1080p,OS=9.1"'
+        XCB1='xcodebuild test -project Equals.xcodeproj -scheme Equals -destination "platform=OS X"'
+        XCB2='xcodebuild test -project Equals.xcodeproj -scheme Equals -destination "platform=iOS Simulator,name=iPhone 6s"'
+        XCB3='xcodebuild build -project Equals.xcodeproj -scheme Equals -destination "platform=watchOS Simulator,name=Apple Watch - 38mm"'
+        XCB4='xcodebuild test -project Equals.xcodeproj -scheme Equals -destination "platform=tvOS Simulator,name=Apple TV 1080p"'
 
         if [[ $TRAVIS || $XCPRETTY_INSTALLED == 0 ]]; then
             eval "set -o pipefail && ${XCB1} | xcpretty" && eval "set -o pipefail && ${XCB1} | xcpretty" && eval "set -o pipefail && ${XCB1} | xcpretty"
         else
-            eval "${XCB1}" && eval "${XCB2}" && eval "${XCB3}"
+            eval "${XCB1}" && eval "${XCB2}" && eval "${XCB3}" && eval "${XCB4}"
         fi
     )
     echo

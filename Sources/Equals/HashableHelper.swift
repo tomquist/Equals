@@ -1,7 +1,7 @@
 /// Internal helper to support hashable implementations.
 struct HashableHelper<T>: HashesType {
     
-    typealias Hasher = T -> Int
+    typealias Hasher = (T) -> Int
     private var hashers = [Hasher]()
     
     let constant: Int
@@ -11,11 +11,11 @@ struct HashableHelper<T>: HashesType {
         self.initial = initial
     }
     
-    mutating func append(hasher: Hasher) {
+    mutating func append(_ hasher: @escaping Hasher) {
         self.hashers.append(hasher)
     }
     
-    func hashValue(value: T) -> Int {
+    func hashValue(_ value: T) -> Int {
         return hashers.reduce(initial) {
             return $0.0 &* constant &+ $0.1(value)
         }
@@ -24,7 +24,7 @@ struct HashableHelper<T>: HashesType {
 
 // MARK: Hashable
 extension HashableHelper {
-    mutating func append<E: Hashable>(property: T -> E) {
+    mutating func append<E: Hashable>(_ property: @escaping (T) -> E) {
         append { property($0).hashValue }
     }
 
@@ -32,10 +32,11 @@ extension HashableHelper {
 
 // MARK: Optional<Hashable>
 extension HashableHelper {
-    mutating func append<E: Hashable>(property: T -> E?) {
+    mutating func append<E: Hashable>(_ property: @escaping (T) -> E?) {
+        let copy = self
         append {
             if let v = property($0) {
-                return self.initial &* self.constant &+ v.hashValue
+                return copy.initial &* copy.constant &+ v.hashValue
             }
             return 0
         }
@@ -43,10 +44,11 @@ extension HashableHelper {
 }
 // MARK: SequenceType<Hashable>
 extension HashableHelper {
-    mutating func append<E: SequenceType where E.Generator.Element: Hashable>(property: T -> E) {
+    mutating func append<E: Sequence>(_ property: @escaping (T) -> E) where E.Iterator.Element: Hashable {
+        let copy = self
         append {
-            return property($0).reduce(self.initial) {
-                return $0.0 &* self.constant &+ $0.1.hashValue
+            return property($0).reduce(copy.initial) {
+                return $0.0 &* copy.constant &+ $0.1.hashValue
             }
         }
     }
