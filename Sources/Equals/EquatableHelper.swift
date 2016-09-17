@@ -2,57 +2,43 @@
 struct EquatableHelper<T>: EqualsType {
     
     typealias EqualsBlock = (T, T) -> Bool
-    private var blocks = [EqualsBlock]()
+    fileprivate var blocks = [EqualsBlock]()
     
-    mutating func append(equals: EqualsBlock) {
+    mutating func append(_ equals: @escaping EqualsBlock) {
         blocks.append(equals)
     }
-    func equals(lhs: T, _ rhs: T) -> Bool {
+    func equals(_ lhs: T, _ rhs: T) -> Bool {
         return !blocks.contains { !$0(lhs, rhs) }
     }
 }
 
+// MARK: Any
+extension EquatableHelper {
+    mutating func append<E>(_ property: @escaping (T) -> E, equals: @escaping (E, E) -> Bool) {
+        append { equals(property($0), property($1)) }
+    }
+}
 // MARK: Equatable
 extension EquatableHelper {
-    mutating func append<E: Equatable>(property: T -> E) {
-        append { property($0) == property($1) }
+    mutating func append<E: Equatable>(_ property: @escaping (T) -> E) {
+        append(property, equals: ==)
     }
 }
 // MARK: Optional<Equatable>
 extension EquatableHelper {
-    mutating func append<E: Equatable>(property: T -> E?) {
-        append { property($0) == property($1) }
+    mutating func append<E: Equatable>(_ property: @escaping (T) -> E?) {
+        append(property, equals: ==)
     }
-}
-// MARK: SequenceType<Equatable>
-extension EquatableHelper {
-    mutating func append<E: Equatable, S: SequenceType where S.Generator.Element == E>(property: T -> S) {
-        append { property($0) == property($1) }
-    }
-}
-private func ==<E: Equatable, S: SequenceType where S.Generator.Element == E>(lhs: S, rhs: S) -> Bool {
-    var gen1 = lhs.generate()
-    var gen2 = rhs.generate()
-    var a: E?
-    var b: E?
-    repeat {
-        a = gen1.next()
-        b = gen2.next()
-        if a != b {
-            return false
-        }
-    } while a != nil || b != nil
-    return (a == nil && b == nil)
 }
 
 // MARK: CollectionType<Equatable>
 extension EquatableHelper {
-    mutating func append<E: Equatable, S: CollectionType where S.Generator.Element == E>(property: T -> S) {
-        append { property($0) == property($1) }
+    mutating func append<E: Equatable, S: Collection>(_ property: @escaping (T) -> S) where S.Iterator.Element == E {
+        append(property, equals: ==)
     }
 }
 
-private func ==<E: Equatable, S: CollectionType where S.Generator.Element == E>(lhs: S, rhs: S) -> Bool {
+private func ==<E: Equatable, S: Collection>(lhs: S, rhs: S) -> Bool where S.Iterator.Element == E {
     if lhs.count != rhs.count {
         return false
     }

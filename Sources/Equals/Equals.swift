@@ -1,28 +1,28 @@
 /// Protocol for equatable helpers
 public protocol EqualsType {
-    typealias Value
+    associatedtype Value
     
     /// Returns `true`, if `lhs` is equal to `rhs`
-    func equals(lhs: Value, _ rhs: Value) -> Bool
+    func equals(_ lhs: Value, _ rhs: Value) -> Bool
 }
 /// Protocol for hashable helpers
 public protocol HashesType {
-    typealias Value
+    associatedtype Value
     
     /// Calculates the hash value for the given value.
-    func hashValue(value: Value) -> Int
+    func hashValue(_ value: Value) -> Int
 }
 
 /// Conform to this protocol to get an implementation of `==` for free.
 public protocol EqualsEquatable: Equatable {
-    typealias Equals: EqualsType
+    associatedtype Equals: EqualsType
     
     /// Equals helper
     static var equals: Equals { get }
 }
 /// Conform to this protocol to get `Hashable` capabilities for free
 public protocol EqualsHashable: EqualsEquatable, Hashable {
-    typealias Hashes: HashesType
+    associatedtype Hashes: HashesType
     
     /// Hashes helper for instance of types conforming to the `EqualsHashable` protocol
     static var hashes: Hashes { get }
@@ -37,7 +37,7 @@ public extension EqualsHashable where Hashes == Equals {
 }
 
 /// Generic equals function for types conforming to `EqualsEquatable`
-public func ==<T: EqualsEquatable where T.Equals.Value == T>(lhs: T, rhs: T) -> Bool {
+public func ==<T: EqualsEquatable>(lhs: T, rhs: T) -> Bool where T.Equals.Value == T {
     return T.equals.equals(lhs, rhs)
 }
 
@@ -52,36 +52,37 @@ public extension EqualsHashable where Hashes.Value == Self {
 /// Helper type to easily conform to the Equatable protocol.
 public struct Equals<T> {
     public typealias Value = T
-    private var helper = EquatableHelper<T>()
+    fileprivate var helper = EquatableHelper<T>()
     
     /// Creates an empty equals helper
     public init() {}
     
     /// Returns a new equatability-helper containing the given `Equatable` property.
-    public func append<E: Equatable>(equatable equatable: T -> E) -> Equals<T> {
+    public func append<E: Equatable>(equatable: @escaping (T) -> E) -> Equals<T> {
         var ret = self; ret.helper.append(equatable); return ret
     }
 
     /// Returns a new equatability-helper containing the given optional `Equatable` property.
-    public func append<E: Equatable>(optional optional: T -> E?) -> Equals<T> {
+    public func append<E: Equatable>(optional: @escaping (T) -> E?) -> Equals<T> {
         var ret = self; ret.helper.append(optional); return ret
     }
 
-    /// Returns a new equatability-helper containing the given sequence of `Equatable` property.
-    public func append<E: Equatable, S: SequenceType where S.Generator.Element == E>(sequence sequence: T -> S) -> Equals<T> {
-        var ret = self; ret.helper.append(sequence); return ret
-    }
-
     /// Returns a new equatability-helper containing the given collection of `Equatable` property.
-    public func append<E: Equatable, S: CollectionType where S.Generator.Element == E>(collection collection: T -> S) -> Equals<T> {
+    public func append<E: Equatable, S: Collection>(collection: @escaping (T) -> S) -> Equals<T> where S.Iterator.Element == E {
         var ret = self; ret.helper.append(collection); return ret
+    }
+    
+    /// Returns e new equatability-helper containing the given property which is compared using the given
+    /// equality function.
+    public func append<O>(_ property: @escaping (T) -> O, equals: @escaping (O, O) -> Bool) -> Equals<T> {
+        var ret = self; ret.helper.append(property, equals: equals); return ret
     }
 
 }
 
 extension Equals: EqualsType {
     /// Returns true, if lhs is equal to rhs
-    public func equals(lhs: Value, _ rhs: Value) -> Bool {
+    public func equals(_ lhs: Value, _ rhs: Value) -> Bool {
         return helper.equals(lhs, rhs)
     }
 }
@@ -89,8 +90,8 @@ extension Equals: EqualsType {
 /// Helper type to easily conform to the Hashable protocol.
 public struct Hashes<T> {
     public typealias Value = T
-    private var equatableHelper = EquatableHelper<T>()
-    private var hashableHelper: HashableHelper<T>
+    fileprivate var equatableHelper = EquatableHelper<T>()
+    fileprivate var hashableHelper: HashableHelper<T>
     
     /// Constant to use in building the hashValue.
     public var constant: Int {
@@ -109,9 +110,18 @@ public struct Hashes<T> {
     public init(constant: Int = 37, initial: Int = 17) {
         hashableHelper = HashableHelper(constant: constant, initial: initial)
     }
+    
+    /// Returns a new hashing-helper containing the given property which is equals and hashes using the
+    /// given functions.
+    public func append<O>(_ property: @escaping (T) -> O, equals: @escaping (O, O) -> Bool, hash: @escaping (O) -> Int) -> Hashes<T> {
+        var ret = self
+        ret.equatableHelper.append(property, equals: equals)
+        ret.hashableHelper.append { hash(property($0)) }
+        return ret
+    }
 
     /// Returns a new hashing-helper containing the given `Hashable` property.
-    public func append<E: Hashable>(hashable hashable: T -> E) -> Hashes<T> {
+    public func append<E: Hashable>(hashable: @escaping (T) -> E) -> Hashes<T> {
         var ret = self
         ret.equatableHelper.append(hashable)
         ret.hashableHelper.append(hashable)
@@ -119,23 +129,15 @@ public struct Hashes<T> {
     }
 
     /// Returns a new hashing-helper containing the given optional `Hashable` property.
-    public func append<E: Hashable>(optional optional: T -> E?) -> Hashes<T> {
+    public func append<E: Hashable>(optional: @escaping (T) -> E?) -> Hashes<T> {
         var ret = self
         ret.equatableHelper.append(optional)
         ret.hashableHelper.append(optional)
         return ret
     }
 
-    /// Returns a new hashing-helper containing the given sequence of `Hashable` property.
-    public func append<E: Hashable, S: SequenceType where S.Generator.Element == E>(sequence sequence: T -> S) -> Hashes<T> {
-        var ret = self
-        ret.equatableHelper.append(sequence)
-        ret.hashableHelper.append(sequence)
-        return ret
-    }
-
     /// Returns a new hashing-helper containing the given collection of `Hashable` property.
-    public func append<E: Hashable, S: CollectionType where S.Generator.Element == E>(collection collection: T -> S) -> Hashes<T> {
+    public func append<E: Hashable, S: Collection>(collection: @escaping (T) -> S) -> Hashes<T> where S.Iterator.Element == E {
         var ret = self
         ret.equatableHelper.append(collection)
         ret.hashableHelper.append(collection)
@@ -145,13 +147,13 @@ public struct Hashes<T> {
 
 extension Hashes: EqualsType {
     /// Returns `true`, if `lhs` is equal to `rhs`
-    public func equals(lhs: Value, _ rhs: Value) -> Bool {
+    public func equals(_ lhs: Value, _ rhs: Value) -> Bool {
         return equatableHelper.equals(lhs, rhs)
     }
 }
 extension Hashes: HashesType {
     /// Calculates the hash value for the given value.
-    public func hashValue(value: Value) -> Int {
+    public func hashValue(_ value: Value) -> Int {
         return hashableHelper.hashValue(value)
     }
 }
