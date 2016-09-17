@@ -1,20 +1,24 @@
 import XCTest
 import Equals
 
+private struct NonHashable {
+    let name: String
+}
+
 private struct Person {
     let firstName: String?
     let lastName: String
     let middleNames: [String]
     let children: Set<Person>
-    let sequence: TestSequence<Int>
+    let nonHashable: NonHashable
 }
 extension Person: EqualsHashable {
     static let hashes: Hashes<Person> = Hashes()
         .append {$0.firstName}
         .append {$0.lastName}
-        .append(collection: {$0.middleNames})
-        .append {$0.sequence}
+        .append {$0.middleNames}
         .append(hashable: {$0.children})
+        .append({$0.nonHashable}, equals: {$0.name == $1.name}, hash: {$0.name.hashValue})
 }
 
 class HashesTests: XCTestCase {
@@ -27,7 +31,7 @@ class HashesTests: XCTestCase {
             ("testEqualPersonsWithDifferentLastName", testEqualPersonsWithDifferentLastName),
             ("testEqualPersonsWithDifferentMiddleNames", testEqualPersonsWithDifferentMiddleNames),
             ("testEqualPersonsWithDifferentChildren", testEqualPersonsWithDifferentChildren),
-            ("testEqualPersonsWithDifferentSequences", testEqualPersonsWithDifferentSequences),
+            ("testEqualPersonsWithDifferentNonHashable", testEqualPersonsWithDifferentNonHashable),
         ]
     }
     
@@ -38,48 +42,48 @@ class HashesTests: XCTestCase {
     }
     
     func testEqualPersons() {
-        let personX = Person(firstName: "John", lastName: "Doe", middleNames: [], children: [], sequence: [1])
-        let personY = Person(firstName: "John", lastName: "Smith", middleNames: [], children: [], sequence: [])
+        let personX = Person(firstName: "John", lastName: "Doe", middleNames: [], children: [], nonHashable: NonHashable(name: "name"))
+        let personY = Person(firstName: "John", lastName: "Smith", middleNames: [], children: [], nonHashable: NonHashable(name: "name"))
         
-        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["André"], children: [personX, personY], sequence: [1, 2])
-        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["André"], children: [personY, personX], sequence: [1, 2])
+        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["André"], children: [personX, personY], nonHashable: NonHashable(name: "name"))
+        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["André"], children: [personY, personX], nonHashable: NonHashable(name: "name"))
         XCTAssertEqual(person1, person2)
         XCTAssertEqual(person1.hashValue, person2.hashValue)
     }
     
     func testEqualPersonsWithDifferentFirstName() {
-        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], sequence: [])
-        let person2 = Person(firstName: nil, lastName: "Quist", middleNames: [], children: [], sequence: [])
+        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], nonHashable: NonHashable(name: "name"))
+        let person2 = Person(firstName: nil, lastName: "Quist", middleNames: [], children: [], nonHashable: NonHashable(name: "name"))
         XCTAssertNotEqual(person1, person2)
         XCTAssertNotEqual(person1.hashValue, person2.hashValue)
     }
     
     func testEqualPersonsWithDifferentLastName() {
-        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], sequence: [])
-        let person2 = Person(firstName: "Tom", lastName: "Tom", middleNames: [], children: [], sequence: [])
+        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], nonHashable: NonHashable(name: "name"))
+        let person2 = Person(firstName: "Tom", lastName: "Tom", middleNames: [], children: [], nonHashable: NonHashable(name: "name"))
         XCTAssertNotEqual(person1, person2)
         XCTAssertNotEqual(person1.hashValue, person2.hashValue)
     }
     
     func testEqualPersonsWithDifferentMiddleNames() {
-        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["Max", "André"], children: [], sequence: [])
-        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["Max", "Peter"], children: [], sequence: [])
+        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["Max", "André"], children: [], nonHashable: NonHashable(name: "name"))
+        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: ["Max", "Peter"], children: [], nonHashable: NonHashable(name: "name"))
         XCTAssertNotEqual(person1, person2)
         XCTAssertNotEqual(person1.hashValue, person2.hashValue)
     }
     
     
     func testEqualPersonsWithDifferentChildren() {
-        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], sequence: [])
-        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [person1], sequence: [])
-        let person3 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [person2], sequence: [])
+        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], nonHashable: NonHashable(name: "name"))
+        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [person1], nonHashable: NonHashable(name: "name"))
+        let person3 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [person2], nonHashable: NonHashable(name: "name"))
         XCTAssertNotEqual(person2, person3)
         XCTAssertNotEqual(person2.hashValue, person3.hashValue)
     }
-
-    func testEqualPersonsWithDifferentSequences() {
-        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], sequence: [1,2])
-        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], sequence: [1,3])
+    
+    func testEqualPersonsWithDifferentNonHashable() {
+        let person1 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], nonHashable: NonHashable(name: "name1"))
+        let person2 = Person(firstName: "Tom", lastName: "Quist", middleNames: [], children: [], nonHashable: NonHashable(name: "name2"))
         XCTAssertNotEqual(person1, person2)
         XCTAssertNotEqual(person1.hashValue, person2.hashValue)
     }

@@ -12,43 +12,29 @@ struct EquatableHelper<T>: EqualsType {
     }
 }
 
+// MARK: Any
+extension EquatableHelper {
+    mutating func append<E>(_ property: @escaping (T) -> E, equals: @escaping (E, E) -> Bool) {
+        append { equals(property($0), property($1)) }
+    }
+}
 // MARK: Equatable
 extension EquatableHelper {
     mutating func append<E: Equatable>(_ property: @escaping (T) -> E) {
-        append { property($0) == property($1) }
+        append(property, equals: ==)
     }
 }
 // MARK: Optional<Equatable>
 extension EquatableHelper {
     mutating func append<E: Equatable>(_ property: @escaping (T) -> E?) {
-        append { property($0) == property($1) }
+        append(property, equals: ==)
     }
-}
-// MARK: SequenceType<Equatable>
-extension EquatableHelper {
-    mutating func append<E: Equatable, S: Sequence>(_ property: @escaping (T) -> S) where S.Iterator.Element == E {
-        append { property($0) == property($1) }
-    }
-}
-private func ==<E: Equatable, S: Sequence>(lhs: S, rhs: S) -> Bool where S.Iterator.Element == E {
-    var gen1 = lhs.makeIterator()
-    var gen2 = rhs.makeIterator()
-    var a: E?
-    var b: E?
-    repeat {
-        a = gen1.next()
-        b = gen2.next()
-        if a != b {
-            return false
-        }
-    } while a != nil || b != nil
-    return (a == nil && b == nil)
 }
 
 // MARK: CollectionType<Equatable>
 extension EquatableHelper {
     mutating func append<E: Equatable, S: Collection>(_ property: @escaping (T) -> S) where S.Iterator.Element == E {
-        append { property($0) == property($1) }
+        append(property, equals: ==)
     }
 }
 

@@ -67,14 +67,15 @@ public struct Equals<T> {
         var ret = self; ret.helper.append(optional); return ret
     }
 
-    /// Returns a new equatability-helper containing the given sequence of `Equatable` property.
-    public func append<E: Equatable, S: Sequence>(sequence: @escaping (T) -> S) -> Equals<T> where S.Iterator.Element == E {
-        var ret = self; ret.helper.append(sequence); return ret
-    }
-
     /// Returns a new equatability-helper containing the given collection of `Equatable` property.
     public func append<E: Equatable, S: Collection>(collection: @escaping (T) -> S) -> Equals<T> where S.Iterator.Element == E {
         var ret = self; ret.helper.append(collection); return ret
+    }
+    
+    /// Returns e new equatability-helper containing the given property which is compared using the given
+    /// equality function.
+    public func append<O>(_ property: @escaping (T) -> O, equals: @escaping (O, O) -> Bool) -> Equals<T> {
+        var ret = self; ret.helper.append(property, equals: equals); return ret
     }
 
 }
@@ -109,6 +110,15 @@ public struct Hashes<T> {
     public init(constant: Int = 37, initial: Int = 17) {
         hashableHelper = HashableHelper(constant: constant, initial: initial)
     }
+    
+    /// Returns a new hashing-helper containing the given property which is equals and hashes using the
+    /// given functions.
+    public func append<O>(_ property: @escaping (T) -> O, equals: @escaping (O, O) -> Bool, hash: @escaping (O) -> Int) -> Hashes<T> {
+        var ret = self
+        ret.equatableHelper.append(property, equals: equals)
+        ret.hashableHelper.append { hash(property($0)) }
+        return ret
+    }
 
     /// Returns a new hashing-helper containing the given `Hashable` property.
     public func append<E: Hashable>(hashable: @escaping (T) -> E) -> Hashes<T> {
@@ -123,14 +133,6 @@ public struct Hashes<T> {
         var ret = self
         ret.equatableHelper.append(optional)
         ret.hashableHelper.append(optional)
-        return ret
-    }
-
-    /// Returns a new hashing-helper containing the given sequence of `Hashable` property.
-    public func append<E: Hashable, S: Sequence>(sequence: @escaping (T) -> S) -> Hashes<T> where S.Iterator.Element == E {
-        var ret = self
-        ret.equatableHelper.append(sequence)
-        ret.hashableHelper.append(sequence)
         return ret
     }
 

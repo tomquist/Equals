@@ -27,7 +27,7 @@ extension Person: EqualsEquatable {
         .append {$0.firstName}
         .append {$0.lastName}
         .append {$0.age}
-        .append(collection: {$0.middleNames})
+        .append {$0.middleNames}
 }
 
 /*: Let's do some comparison for equal objects */
@@ -47,7 +47,7 @@ extension Person: EqualsHashable {
         .append {$0.firstName}
         .append {$0.lastName}
         .append {$0.age}
-        .append(collection: {$0.middleNames})
+        .append {$0.middleNames}
 }
 
 tom.hashValue == Person(firstName: "Tom", lastName: "Quist", middleNames: ["André"], age: 30).hashValue // => true

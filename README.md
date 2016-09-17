@@ -118,8 +118,8 @@ That's it! Now you can compare your type, using the ``==`` operator, put it into
 Equals currently provides ``append`` functions for four types of properties:
 * ``Equatable``/``Hashable`` properties
 * ``Optional`` properties of type ``Equatable``/``Hashable``
-* ``SequenceType`` properties where the elements are ``Equatable``/``Hashable``
 * ``CollectionType`` properties where the elements are ``Equatable``/``Hashable``
+* Any other property, but you have to provide equals and hashValue functions.
 
 Sometimes, you explicitly have to specify which append method to use. E.g. lets change the property ``children`` of our ``Person`` example above into type ``Set<Person>``. Because ``Set`` already conforms to ``Hashable``, we now get a compiler error:
 ```
