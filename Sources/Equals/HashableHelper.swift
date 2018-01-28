@@ -40,7 +40,7 @@ struct HashableHelper<T>: HashesType {
     
     func hashValue(_ value: T) -> Int {
         return hashers.reduce(initial) {
-            return $0.0 &* constant &+ $0.1.hasher(value)
+            return $0 &* constant &+ $1.hasher(value)
         }
     }
 }
@@ -64,7 +64,7 @@ fileprivate extension Collection where Iterator.Element: Hashable {
     fileprivate static func getHashValue(initial: Int, constant: Int) -> (Self) -> Int {
         return {
             return $0.reduce(initial) {
-                return $0.0 &* constant &+ $0.1.hashValue
+                return $0 &* constant &+ $1.hashValue
             }
         }
     }
